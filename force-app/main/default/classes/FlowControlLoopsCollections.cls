@@ -72,15 +72,19 @@ public with sharing class FlowControlLoopsCollections {
             return null;
         }
         
+        /*
         // Initialize largestNum as null
-        // Integer largestNum = null;
+        Integer largestNum = null;
         
-        // if (num1 >= num2) {
-        //     largestNum = num1;
-        // } else {
-        //     largestNum = num2;
-        // }        
-        // return largestNum;
+        if (num1 >= num2) {
+            largestNum = num1;
+        } else {
+            largestNum = num2;
+        }        
+        return largestNum;
+        */
+
+        //--OR--
 
         return (num1 >= num2) ? num1 : num2;
     }
@@ -95,7 +99,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        if (a == null) {
+            return null;
+        } else if (a > 0) {
+            return 'Positive';
+        } else if (a < 0) {
+            return 'Negative';
+        } else {
+            return 'Zero';
+        }
     }
 
     /**
